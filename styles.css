@@ -22,6 +22,9 @@ p {
   position: relative;
   top: 90px;
 }
+footer {
+  text-align: center;
+}
 .row {
   font-size: 25px;
 }
