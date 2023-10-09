@@ -4,13 +4,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Raleway:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>
-        hell yeah!!!
-    </h1>
+    <div class="container">
+        <div class="project">
+            <form id="search-form">
+                <div class="search-bar">
+                    <input type="text" placeholder="Enter city name" autofocus="on" autocomplete="off"
+                        id="city-input" />
+                    <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm w-100" />
+                    <button id="current-location-button" type="button" class="btn btn-danger">Current location</button>
+            </form>
+        </div>
+        <h1 id="city">☀️ Tokyo, Japan</h1>
+        <h2 id="temperture"></h2>
+        <h3 id="date">Saturday 12:00 pm</h3>
+
+
+        <div id="grid1" class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    ⛅
+                    <br />
+                    1:00 pm
+                    <br />
+                    33<small>℃</small>
+                </div>
+
+                <div class="col">
+
+                    🌥️
+                    <br />
+                    4:00 pm
+                    <br />
+                    31<small>℃</small>
+                </div>
+
+                <div class="col">
+                    ☁️
+                    <br />
+                    7:00 pm
+                    <br />
+                    29<small>℃</small>
+                </div>
+
+                <div class="col">
+                    ☁️
+                    <br />
+                    8:00 pm
+                    <br />
+                    29<small>℃</small>
+                </div>
+                <div class="col">
+                    🌧️
+                    <br />
+                    9:00 pm
+                    <br />
+                    28<small>℃</small>
+                </div>
+                <div class="col">
+                    ☁️
+                    <br />
+                    10:00 pm
+                    <br />
+                    28<small>℃</small>
+                </div>
+            </div>
+        </div>
+
+
+        <p>
+            <strong> Next Week</strong>
+        </p>
+        <div class="container text-center">
+            <div id="grid" class="row align-items-end">
+                <div class="col">🌧️/☁️<br /> Sunday <br /> 33° 27°</div>
+                <div class="col">🌧️<br /> Monday <br /> 31° 25°</div>
+                <div class="col">☁️<br /> Tuesday <br /> 35° 27°</div>
+                <div class="col">🌧️/🌦️<br /> Wednesday <br /> 31° 25°</div>
+                <div class="col">🌧️/⛈️<br /> Thusday <br /> 27° 23°</div>
+                <div class="col">🌦️<br /> Friday <br /> 26° 22°</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+    <script src="Java.js"></script>
 </body>
 
 </html>
