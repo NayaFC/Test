@@ -26,8 +26,38 @@ footer {
   text-align: center;
 }
 .row {
+  border-bottom: 1px solid white;
+  margin: 40px 0;
+  padding-bottom: 50px;
+  text-align: center;
   font-size: 25px;
 }
+.weatherPreview {
+  box-sizing: border-box;
+  display: block;
+}
+.forecastDay {
+  color: gray;
+  font-size: 20px;
+  line-height: 35px;
+  text-align: center;
+}
+.forecast-Temperture {
+  color: gray;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+.forecast-Temp1 {
+  box-sizing: border-box;
+  display: block;
+}
+.forecast-Temp2 {
+  margin-left: 15px;
+  opacity: 0.6;
+}
+
 #grid1 {
   margin-top: 50px;
 }
