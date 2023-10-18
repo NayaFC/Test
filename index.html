@@ -20,112 +20,113 @@
         <div class="project">
             <form id="search-form">
                 <div class="search-bar">
-                    <input type="text" placeholder="Enter a city" autofocus="on" autocomplete="off" id="city-input" />
+                    <input class="form-control" list="datalistOptions" id="exampleDataList"
+                        placeholder="Type to search..." />
                     <button type="submit" class="btn btn-primary">Search</button>
-                    <button id="current-location-button" type="button" class="btn btn-danger">Your location</button>
+                    <button id="current-location-button" type="button" class="btn btn-info">Your location</button>
+                </div>
             </form>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <h1 id="city"> Tokyo, Japan</h1>
-                <ul>
-                    <li>
-                        <span id="date">
-                            Saturday 12:00 pm
-                        </span>
-                        <span>
-                            Scattered clouds
-                        </span>
-                    </li>
-                    <li>
-                        "Humidity: "
-                        <strong>"53" "%"</strong>
-                        ", Wind: "
-                        <strong> "6.09" "Km/h"</strong>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-6">
-                <img src="https://png.pngtree.com/png-clipart/20201209/original/pngtree-sun-png-clipart-colored-png-image_5656301.png"
-                    width="100px" height="100px" alt="clear" />
 
-                <span id="temperture"></span>
-                <span class="unit"> | <a href="#">℉</a></span>
-
-            </div>
-        </div>
-
-
-
-
-
-        <div id="grid1" class="container text-center">
-            <div class="row align-items-center">
-                <div class="col">
-                    <div class="weatherPreview">
-                        <div class="forecastDay">Sun</div>
-                        <div>⛅</div>
-                        <div class="forecast-Temperture">
-                            <span class="forecast-Temp1"> 19° </span>
-                            <span class="forecast-Temp2"> 23° </span>
-                        </div>
+            <div class="row">
+                <div class="heading-style">
+                    <div class="col-6">
+                        <h1 id="city"> Tokyo, Japan</h1>
+                        <ul class="list">
+                            <li>
+                                <div>
+                                    Scattered clouds
+                                </div>
+                            </li>
+                            <li>
+                                Humidity:
+                                <strong>53 %</strong>
+                            </li>
+                            <li>
+                                Wind:
+                                <strong> 6.09 Km/h</strong>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="weatherPreview">
-                        <div class="forecastDay">Sun</div>
-                        <div>⛅</div>
-                        <div class="forecast-Temperture">
-                            <span class="forecast-Temp1"> 19° </span>
-                            <span class="forecast-Temp2"> 23° </span>
-                        </div>
+                <div class="image" class="col-6">
+                    <div id="date">
+                        <strong> Saturday 12:00 pm</strong>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="weatherPreview">
-                        <div class="forecastDay">Sun</div>
-                        <div>⛅</div>
-                        <div class="forecast-Temperture">
-                            <span class="forecast-Temp1">19°</span>
-                            <span class="forecast-Temp2">23°</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="weatherPreview">
-                        <div class="forecastDay">Sun</div>
-                        <div>⛅</div>
-                        <div class="forecast-Temperture">
-                            <span class="forecast-Temp1"> 19° </span>
-                            <span class="forecast-Temp2"> 23° </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="weatherPreview">
-                        <div class="forecastDay">Sun</div>
-                        <div>⛅</div>
-                        <div class="forecast-Temperture">
-                            <span class="forecast-Temp1"> 19° </span>
-                            <span class="forecast-Temp2"> 23° </span>
-                        </div>
-                    </div>
+                    <img src="https://png.pngtree.com/png-clipart/20201209/original/pngtree-sun-png-clipart-colored-png-image_5656301.png"
+                        width="100px" height="100px" alt="clear" />
+
+                    <span id="temperture"></span>
+                    <span class="unit"> | <a href="#">℉</a></span>
 
                 </div>
             </div>
 
 
+
+
+
+            <div id="grid1" class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div class="weatherPreview">
+                            <div class="forecastDay">Sun</div>
+                            <div>⛅</div>
+                            <div class="forecast-Temperture">
+                                <span class="forecast-Temp1"> 19° </span>
+                                <span class="forecast-Temp2"> 23° </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="weatherPreview">
+                            <div class="forecastDay">Sun</div>
+                            <div>⛅</div>
+                            <div class="forecast-Temperture">
+                                <span class="forecast-Temp1"> 19° </span>
+                                <span class="forecast-Temp2"> 23° </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="weatherPreview">
+                            <div class="forecastDay">Sun</div>
+                            <div>⛅</div>
+                            <div class="forecast-Temperture">
+                                <span class="forecast-Temp1">19°</span>
+                                <span class="forecast-Temp2">23°</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="weatherPreview">
+                            <div class="forecastDay">Sun</div>
+                            <div>⛅</div>
+                            <div class="forecast-Temperture">
+                                <span class="forecast-Temp1"> 19° </span>
+                                <span class="forecast-Temp2"> 23° </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="weatherPreview">
+                            <div class="forecastDay">Sun</div>
+                            <div>⛅</div>
+                            <div class="forecast-Temperture">
+                                <span class="forecast-Temp1"> 19° </span>
+                                <span class="forecast-Temp2"> 23° </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-    </div>
-    <footer>
+        <footer>
 
-        <a href="https://github.com/NayaFC/Test" target="_blank"> Open-source code</a> by Nayil Frias
-    </footer>
-    </div>
-    </div>
-
-
-    </div>
+            <a href="https://github.com/NayaFC/Test" target="_blank"> Open-source code</a> by Nayil Frias
+        </footer>
     </div>
     <script src=" Java.js"></script>
 </body>
