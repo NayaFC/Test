@@ -52,6 +52,7 @@ img {
   right: -103px;
   bottom: -17px;
   font-size: 33px;
+  text-transform: capitalize;
 }
 .searchStyle {
   text-align: right;

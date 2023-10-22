@@ -12,10 +12,16 @@ currentTime.innerHTML = `${day} ${hour}:${minute}`;
 
 function showTemp(response) {
   let h1 = document.querySelector("#city");
-  h1.innerHTML = response.data.name;
   let temp = Math.round(response.data.main.temp);
   let h2 = document.querySelector("#temperture");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  h1.innerHTML = response.data.name;
   h2.innerHTML = `${temp} ℃`;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function search(city) {
