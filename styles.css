@@ -33,6 +33,23 @@ footer {
   color: #757a79;
   font-size: 25px;
 }
+.searchStyle {
+  text-align: right;
+}
+.formControl {
+  padding: 0.375rem 0.75rem;
+  width: 25%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 .btn {
   font-size: 15px;
 }
