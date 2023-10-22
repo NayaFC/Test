@@ -1,23 +1,32 @@
 body {
-  background: radial-gradient(
-    592px at 48.2% 50%,
-    rgba(255, 255, 249, 0.6) 0%,
-    rgb(160, 199, 254) 74.6%
-  );
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+}
+html,
+body {
+  min-height: 100%;
 }
 .project {
-  font-family: "Raleway", sans-serif;
+  background: linear-gradient(
+    76.8deg,
+    rgb(121, 45, 129) 3.6%,
+    rgb(36, 31, 98) 90.4%
+  );
+  max-width: 800px;
+  color: #fff;
+  font-family: Palatino, URW Palladio L, serif;
   border-radius: 10px;
   width: 70%;
   padding: 132px;
-  margin: 30px auto;
+  margin: 158px auto;
+  border: 1px solid #fff;
+  margin-bottom: 20px;
 }
 
 h1 {
-  margin-top: -22px;
-  color: #757a79;
+  margin-top: -125px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 30px;
 }
 h2 {
   margin-top: -1px;
@@ -29,9 +38,20 @@ p {
 footer {
   text-align: center;
 }
+img {
+  margin-right: 20px;
+}
 #date {
-  color: #757a79;
-  font-size: 25px;
+  font-size: 17px;
+  position: relative;
+  top: -6px;
+  margin-bottom: 60px;
+}
+#description {
+  position: relative;
+  right: -103px;
+  bottom: -17px;
+  font-size: 33px;
 }
 .searchStyle {
   text-align: right;
@@ -44,7 +64,7 @@ footer {
   line-height: 1.5;
   color: var(--bs-body-color);
   appearance: none;
-  background-color: var(--bs-body-bg);
+  background-color: #dad4ec;
   background-clip: padding-box;
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
@@ -54,29 +74,27 @@ footer {
   font-size: 15px;
 }
 .unit {
-  font-size: 30px;
-  color: gray;
-  font-weight: 100;
+  position: relative;
+  top: -17px;
+  font-size: 16px;
   font-style: normal;
 }
-.form-control {
-  margin-bottom: 10px;
-}
+
 .row {
   margin: 40px 0;
   padding-top: 45px;
   text-align: center;
   font-size: 25px;
+  margin-bottom: -33px;
 }
 .heading-style {
-  position: relative;
-  left: -124px;
-  top: -27px;
+  text-align: center;
+  top: 10px;
 }
 .image {
   position: relative;
-  top: -172px;
-  right: -125px;
+  top: -37px;
+  right: 183px;
 }
 
 .weatherPreview {
@@ -84,13 +102,11 @@ footer {
   display: block;
 }
 .forecastDay {
-  color: gray;
   font-size: 20px;
   line-height: 35px;
   text-align: center;
 }
 .forecast-Temperture {
-  color: gray;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -106,24 +122,24 @@ footer {
 }
 
 #grid1 {
-  margin-top: -172px;
+  margin-top: -127px;
 }
 #temperture {
-  color: gray;
-  font-size: 30px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
 }
 .search-bar {
-  text-align: center;
   position: relative;
   top: -63px;
+  right: -88px;
 }
 
 .list {
   list-style: none;
-  color: #757a79;
-  font-size: 18px;
+  font-size: 15px;
   font-style: normal;
-  font-weight: 1300;
+  position: relative;
+  left: 307px;
+  top: -115px;
 }

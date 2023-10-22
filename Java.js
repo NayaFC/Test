@@ -4,15 +4,7 @@ let currentTime = document.querySelector("#date");
 let hour = now.getHours();
 let minute = now.getMinutes();
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 let day = days[now.getDay()];
 
