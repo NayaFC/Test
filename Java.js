@@ -12,7 +12,6 @@ function formatDate(timestamp) {
 }
 
 function showTemp(response) {
-  console.log(response.data);
   let h1 = document.querySelector("#city");
   let temp = Math.round(response.data.main.temp);
   let h2 = document.querySelector("#temperture");
