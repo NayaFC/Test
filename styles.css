@@ -15,6 +15,9 @@ h1 {
 footer {
   text-align: center;
 }
+a {
+  text-decoration: none;
+}
 
 #date {
   font-size: 17px;
@@ -68,6 +71,11 @@ footer {
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.image .active {
+  color: #fff;
+  cursor: default;
 }
 .btn {
   font-size: 15px;

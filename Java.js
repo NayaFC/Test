@@ -13,7 +13,6 @@ function formatDate(timestamp) {
 
 function showTemp(response) {
   let h1 = document.querySelector("#city");
-  let temp = Math.round(response.data.main.temp);
   let h2 = document.querySelector("#temperture");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
@@ -21,10 +20,12 @@ function showTemp(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
+  celsiusTemperture = Math.round(response.data.main.temp);
+
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   h1.innerHTML = response.data.name;
-  h2.innerHTML = `${temp} ℃`;
+  h2.innerHTML = celsiusTemperture;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
@@ -58,10 +59,36 @@ function searchPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(getLocation);
 }
+
+function fahrenheitTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperture = (14 * 9) / 5 + 32;
+  let tempertureElement = document.querySelector("#temperture");
+  tempertureElement.innerHTML = Math.round(fahrenheitTemperture);
+}
+
+function celsiusTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let celsiusElement = document.querySelector("#temperture");
+  celsiusElement.innerHTML = celsiusTemperture;
+}
+
+let celsiusTemperture = null;
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", currentCity);
 
 let showLocation = document.querySelector("#current-location-button");
 showLocation.addEventListener("click", searchPosition);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", fahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", celsiusTemp);
 
 search("Tokyo");
