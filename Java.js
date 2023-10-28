@@ -11,6 +11,31 @@ function formatDate(timestamp) {
   return `${day} ${hour}:${minute}`;
 }
 
+function dispalyForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `       <div class="col-2">
+              <div class="forecastDay">
+                 ${day}
+                 <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" width="36" />
+                 </div>
+                <div class="forecastTemperture">
+                <span class="weatherForecastMax"> 18° </span>
+
+                 <span class="weatherForecastMin"> 19° </span>
+
+              </div>
+              </div>
+              `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemp(response) {
   let h1 = document.querySelector("#city");
   let h2 = document.querySelector("#temperture");
@@ -92,3 +117,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", celsiusTemp);
 
 search("Tokyo");
+dispalyForecast();
