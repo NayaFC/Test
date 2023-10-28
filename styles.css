@@ -32,9 +32,7 @@ a {
   font-size: 33px;
   text-transform: capitalize;
 }
-#grid1 {
-  margin-top: -127px;
-}
+
 #temperture {
   font-size: 40px;
   font-style: normal;
@@ -104,30 +102,6 @@ a {
   right: 183px;
 }
 
-.weatherPreview {
-  box-sizing: border-box;
-  display: block;
-}
-.forecastDay {
-  font-size: 20px;
-  line-height: 35px;
-  text-align: center;
-}
-.forecast-Temperture {
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px;
-}
-.forecast-Temp1 {
-  box-sizing: border-box;
-  display: block;
-}
-.forecast-Temp2 {
-  margin-left: 15px;
-  opacity: 0.6;
-}
-
 .search-bar {
   position: relative;
   top: -63px;
@@ -142,4 +116,21 @@ a {
   position: relative;
   left: 307px;
   top: -115px;
+}
+
+.weatherForcast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecastDay {
+  font-size: 16px;
+  color: #fff;
+}
+.weatherForecastMin {
+  opacity: 0.6;
+}
+
+.forecastTemperture {
+  font-size: 13px;
 }
