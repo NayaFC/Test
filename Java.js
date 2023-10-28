@@ -11,7 +11,8 @@ function formatDate(timestamp) {
   return `${day} ${hour}:${minute}`;
 }
 
-function dispalyForecast() {
+function dispalyForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun"];
@@ -36,6 +37,14 @@ function dispalyForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForcast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "ct60b4ef8f613bo52b3607d5ab790c4c";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(dispalyForecast);
+}
+
 function showTemp(response) {
   let h1 = document.querySelector("#city");
   let h2 = document.querySelector("#temperture");
@@ -45,24 +54,26 @@ function showTemp(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
-  celsiusTemperture = Math.round(response.data.main.temp);
+  celsiusTemperture = Math.round(response.data.temperature.current);
 
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
-  h1.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = response.data.temperature.humidity;
+  h1.innerHTML = response.data.city;
   h2.innerHTML = celsiusTemperture;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  dateElement.innerHTML = formatDate(response.data.time * 1000);
   iconElement.setAttribute(
     "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+
+  getForcast(response.data.coordinates);
 }
 
 function search(city) {
-  let apiKey = "5293d8454b519c30f6f6331f38c85b4c";
+  let apiKey = "ct60b4ef8f613bo52b3607d5ab790c4c";
   let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(showTemp);
 }
@@ -74,10 +85,12 @@ function currentCity(event) {
 }
 
 function getLocation(position) {
-  let key = "6bfa54f242cbb59343d4e58db578dc61";
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${key}`;
+  console.log(position);
 
-  axios.get(url).then(showTemp);
+  let key = "ct60b4ef8f613bo52b3607d5ab790c4c";
+  let url = `https://api.shecodes.io/weather/v1/current?lon=${position.coords.longitude}&lat=${position.coords.latitude}&units=metric&key=${key}`;
+
+  https: axios.get(url).then(showTemp);
 }
 
 function searchPosition(event) {
@@ -117,4 +130,3 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", celsiusTemp);
 
 search("Tokyo");
-dispalyForecast();
