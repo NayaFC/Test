@@ -50,7 +50,7 @@ a {
   font-family: Palatino, URW Palladio L, serif;
   border-radius: 10px;
   width: 70%;
-  padding: 132px;
+  padding: 111px;
   margin: 158px auto;
   border: 1px solid #fff;
   margin-bottom: 20px;
@@ -86,14 +86,12 @@ a {
 }
 
 .row {
-  margin: 40px 0;
-  padding-top: 45px;
   text-align: center;
   font-size: 25px;
   margin-bottom: -33px;
 }
 .heading-style {
-  text-align: center;
+  text-align: left;
   top: 10px;
 }
 .image {
