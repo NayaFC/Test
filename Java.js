@@ -20,8 +20,6 @@ function formatDay(timestamp) {
 }
 
 function dispalyForecast(response) {
-  console.log(response.data.daily);
-
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
@@ -54,7 +52,6 @@ function dispalyForecast(response) {
 }
 
 function getForcast(coordinates) {
-  console.log(coordinates);
   let apiKey = "ct60b4ef8f613bo52b3607d5ab790c4c";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
 
