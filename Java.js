@@ -111,19 +111,8 @@ function searchPosition(event) {
   navigator.geolocation.getCurrentPosition(getLocation);
 }
 
-function fahrenheitTemp(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperture = (14 * 9) / 5 + 32;
-  let tempertureElement = document.querySelector("#temperture");
-  tempertureElement.innerHTML = Math.round(fahrenheitTemperture);
-}
-
 function celsiusTemp(event) {
   event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
   let celsiusElement = document.querySelector("#temperture");
   celsiusElement.innerHTML = celsiusTemperture;
 }
@@ -135,11 +124,5 @@ searchForm.addEventListener("submit", currentCity);
 
 let showLocation = document.querySelector("#current-location-button");
 showLocation.addEventListener("click", searchPosition);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", fahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", celsiusTemp);
 
 search("Tokyo");
